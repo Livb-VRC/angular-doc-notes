@@ -1,0 +1,10 @@
+<!-- 
+With keyup.enter we access the keyup->enter method(so keyup alone would be any key)
+and with myInput.value we passdown the value of the input  -->
+<input #myInput (keyup.enter)="onKey(myInput.value)"
+>
+<button #myButton (click)="onKey(myInput.value)">Add</button>
+
+<div *ngFor="let value of values">
+  <p>{{value}}</p>
+  </div>
